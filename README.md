@@ -1,62 +1,72 @@
-# Time-Series-Analysis---Dunnhumby---hw
+### 📊 **Time-Series-Analysis-Dunnhumby-hw**  
+🛒 **Adatelemzés Kiskereskedelmi Promóciós Adatokon**  
+---
 
-# Adatelemzés Kiskereskedelmi Promóciós Adatokon
-## Leírás
-Ez a projekt egy valós idejű adatbázison végzett elemzést tartalmaz, ami az értékesítési trendeket, a szezonális mintákat és a különböző típusú promóciók (akciók, bolti kiemelések) hatékonyságát vizsgálja. A célja, hogy betekintést nyújtson a marketingkampányok optimalizálásához és az erőforrások hatékony elosztásához.
+## 📖 **Leírás**  
+Ez a projekt egy valós idejű adatbázison végzett elemzést tartalmaz, ami az értékesítési trendeket, szezonális mintákat és különböző promóciós típusok (akciók, bolti kiemelések) hatékonyságát vizsgálja.  
+🎯 **Célja:** betekintést nyújtani a marketingkampányok optimalizálásához és az erőforrások hatékony elosztásához.  
 
-A projekt segítséget nyújt az alábbi üzleti kérdések megválaszolásában:
-- Mely promóciós típusok növelik leginkább az eladási mennyiségeket?
-- Hogyan alakítsuk ki a marketingstratégiát a szezonális hatások figyelembevételével?
-- Hogyan lehet pontosan megjósolni az eladási trendeket, és ezek alapján tervezni az árképzést és készletezést?
+🔍 A projekt választ ad az alábbi üzleti kérdésekre:  
+✅ **Mely promóciók növelik leginkább az eladási mennyiségeket?**  
+✅ **Hogyan építsük fel a marketingstratégiát a szezonális hatások figyelembevételével?**  
+✅ **Hogyan lehet pontosan megjósolni az eladási trendeket, és ezek alapján tervezni az árképzést és készletezést?**  
 
-## Források
-A projekt az alábbi forrást használja:
-- [Dunnhumby Adatbázis](https://www.dunnhumby.com/source-files/)
+---
 
-## Telepítés
+## 📂 **Források**  
+🔹 **Adatbázis:** Dunnhumby Dataset  
 
-A szükséges Python csomagok telepítése:
+---
 
-```bash
+## ⚙️ **Telepítés**  
+A szükséges Python csomagok telepítéséhez futtasd az alábbi parancsot:  
+```
 pip install openpyxl pandas numpy matplotlib seaborn scipy
 ```
 
-## Adatok Betöltése
-A projekt adatai az Excel fájlban találhatók. A fájl különböző munkalapokat tartalmaz, például:
-- **dh Store Lookup**: Üzletek adatai
-- **dh Products Lookup**: Termékek adatai
-- **dh Transaction Data**: Tranzakciós adatok
+---
 
-A kód segítségével az adatokat beolvashatjuk és előkészíthetjük az elemzéshez.
+## 📥 **Adatok Betöltése**  
+Az adatok egy Excel fájlban találhatók (sajnos mérete miatt itt nem elérhető), amely több munkalapot tartalmaz:  
+ **dh Store Lookup** – Üzletek adatai  
+ **dh Products Lookup** – Termékek adatai  
+ **dh Transaction Data** – Tranzakciós adatok  
 
+🔽 **Betöltés és ellenőrzés:**  
 ```python
 import pandas as pd
 
 # Adatok betöltése
 file_path = 'file.xlsx'
-breakfast = pd.ExcelFile(file_path)
+excel_data = pd.ExcelFile(file_path)
 
-# Munkalapok ellenőrzése
-print("Munkalapok nevei:", breakfast.sheet_names)
+# Munkalapok listázása
+print("Munkalapok nevei:", excel_data.sheet_names)
 ```
 
-## Elemzés
-Az adatok előkészítése után következő lépéseket jönnek:
-1. **Adattisztítás és előkészítés**: Az adatok előkészítése és a szükséges oszlopok létrehozása.
-2. **Exploratory Data Analysis (EDA)**: Az adatok vizualizálása és a promóciók hatékonyságának összehasonlítása.
-3. **Szezonális Mintázatok Elemzése**: Az értékesítési trendek és szezonális hatások elemzése.
-4. **Ár-Érzékenységi Elemzés**: Az árak és az eladások közötti kapcsolat vizsgálata.
-5. **Promóciós Típusok Hatékonysága**: A különböző promóciós típusok hatékonyságának elemzése kategóriák szerint.
+---
 
-## Kód
-A kód Python-ban íródott és a következő könyvtárakat használom:
-- `pandas`: Adatok kezelésére és elemzésére.
-- `matplotlib`, `seaborn`: Az adatok vizualizálására.
-- `scipy`: Statisztikai tesztekhez.
+## 🔍 **Elemzés Folyamata**  
+🔹 ** Adattisztítás és előkészítés** – Hibás vagy hiányzó adatok kezelése, oszlopok létrehozása  
+🔹 ** Exploratory Data Analysis (EDA)** – Adatok vizualizálása 📊  
+🔹 ** Szezonális Mintázatok Elemzése** – 📆 Értékesítési trendek vizsgálata  
+🔹 ** Ár-Érzékenységi Elemzés** – 💰 Az ár és kereslet közötti kapcsolat elemzése  
+🔹 ** Promóciós Típusok Hatékonysága** – 📢 Különböző promóciók sikerességének vizsgálata  
 
-## Eredmények
-A projekt eredményei közé tartoznak a következő megfigyelések:
-- A promóciós termékek eladása ingadozó, míg a nem promóciós termékek stabil kereslettel rendelkeznek.
-- Az árak jelentős hatással vannak az eladások számának alakulására.
-- A promóciók különösen jól működnek az alacsony árkategóriában.
+---
+
+## 💻 **Kód és Felhasznált Könyvtárak**  
+ **Használt Python könyvtárak:**  
+ **pandas** – Adatok kezelésére és elemzésére  
+ **matplotlib, seaborn** – Grafikonok és vizualizáció  
+ **scipy** – Statisztikai tesztek  
+
+---
+
+## 📈 **Eredmények**  
+**Főbb megfigyelések:**  
+A promóciós termékek eladása 📉 ingadozó, míg a nem promóciós termékek kereslete stabil.  
+Az árak **jelentősen befolyásolják** az eladási mennyiséget.  
+Az akciók **kiemelkedően hatékonyak** az alacsony árkategóriás termékek esetén.  
+
 
